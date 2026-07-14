@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Founder from "./Founder";
 import Work from "./work";
 import Contact from "./Contact";
+import FadeIn from "./FadeIn";
 
 export default function Home() {
   return (
@@ -15,9 +16,9 @@ export default function Home() {
           Strategy and product engineering, built from Port Harcourt.
         </p>
       </div>
-      <Founder />
-      <Work />
-      <Contact />
+<FadeIn><Founder /></FadeIn>
+<FadeIn><Work /></FadeIn>
+<FadeIn><Contact /></FadeIn>
     </main>
   );
 }
