@@ -31,7 +31,7 @@ export default function Contact() {
           Contact
         </p>
         <h2 className="text-3xl font-bold mb-6">
-          Let's build something.
+          Let&apos;s build something.
         </h2>
         <p className="text-gray-400 mb-8">
           Based in Port Harcourt, working across strategy, product, and engineering.

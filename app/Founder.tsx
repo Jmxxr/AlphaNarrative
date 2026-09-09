@@ -14,7 +14,7 @@ export default function Founder() {
           at scale.
           Alpha Narrative is a Digital and System Infrastructure Development company that builds and operates multiple products under one roof,
           With a sharp and focused thesis:
-          Nigeria's informal economy needs formal infrastructure, 
+          Nigeria&apos;s informal economy needs formal infrastructure,
           and no single product can capture it — it needs several, each owning a vertical.
           Alpha Narrative is building a comprehensive ecosystem to address these needs and breach the gap between informal and formal economic activity.
         </p>
