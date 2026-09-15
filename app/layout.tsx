@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Manrope, Cormorant_Garamond, IBM_Plex_Mono } from "next/font/google";
+import { Footer } from "./components/Footer";
+import { Navigation } from "./components/Navigation";
 import "./globals.css";
+
+const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+const serif = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-serif", weight: ["400", "500", "600"] });
+const mono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alphanarrative.pro"),
@@ -7,8 +14,7 @@ export const metadata: Metadata = {
     default: "Alpha Narrative — Engineering Intelligence for Business",
     template: "%s | Alpha Narrative",
   },
-  description:
-    "Alpha Narrative builds software, AI automation and intelligent business systems that help companies operate efficiently and grow.",
+  description: "Alpha Narrative designs and builds software, AI automation and intelligent business systems for ambitious companies.",
   applicationName: "Alpha Narrative",
   keywords: [
     "Alpha Narrative",
@@ -22,9 +28,6 @@ export const metadata: Metadata = {
   authors: [{ name: "John Michael Abang" }],
   creator: "Alpha Narrative",
   publisher: "Alpha Narrative",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_NG",
@@ -53,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${sans.variable} ${serif.variable} ${mono.variable}`}><Navigation /><main>{children}</main><Footer /></body>
     </html>
   );
 }
