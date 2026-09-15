@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.alphanarrative.pro/sitemap.xml",
+    sitemap: "https://alphanarrative.pro/sitemap.xml",
   };
 }

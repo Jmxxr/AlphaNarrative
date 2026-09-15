@@ -1,31 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.alphanarrative.pro"),
+  metadataBase: new URL("https://alphanarrative.pro"),
   title: {
-    default: "Alpha Narrative — Strategy & Product Engineering",
+    default: "Alpha Narrative — Engineering Intelligence for Business",
     template: "%s | Alpha Narrative",
   },
   description:
-    "Alpha Narrative builds strategy, product, and digital infrastructure for Nigeria's informal economy.",
+    "Alpha Narrative builds software, AI automation and intelligent business systems that help companies operate efficiently and grow.",
   applicationName: "Alpha Narrative",
   keywords: [
     "Alpha Narrative",
-    "product engineering",
-    "product strategy",
-    "digital infrastructure",
+    "software development",
+    "AI automation",
+    "business systems",
+    "business intelligence",
     "Nigeria",
     "Port Harcourt",
   ],
@@ -40,15 +30,15 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: "/",
     siteName: "Alpha Narrative",
-    title: "Alpha Narrative — Strategy & Product Engineering",
+    title: "Alpha Narrative — Engineering Intelligence for Business",
     description:
-      "Building strategy, product, and digital infrastructure from Port Harcourt.",
+      "Software, AI automation and connected business systems built for growth.",
   },
   twitter: {
-    card: "summary",
-    title: "Alpha Narrative — Strategy & Product Engineering",
+    card: "summary_large_image",
+    title: "Alpha Narrative — Engineering Intelligence for Business",
     description:
-      "Building strategy, product, and digital infrastructure from Port Harcourt.",
+      "Software, AI automation and connected business systems built for growth.",
   },
   robots: {
     index: true,
@@ -62,11 +52,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
