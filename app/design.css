@@ -163,11 +163,13 @@ button{cursor:pointer}
 .btn-primary:hover,.nav-contact:hover{background:#304d70}
 .site-canvas{background:var(--paper)}
 .film-hero{background:#e2ebf4;color:var(--ink);overflow:hidden}
-.studio-hero-art{height:clamp(390px,48vw,650px);position:relative;overflow:hidden;background:#121c27}
+.studio-hero-art{height:clamp(390px,48vw,650px);position:relative;overflow:hidden;background:#11172e}
 .studio-hero-video{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-.film-hero-content{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:5vw;align-items:end;padding-top:clamp(38px,5vw,82px);padding-bottom:clamp(40px,5vw,75px);background:linear-gradient(135deg,#eef4fa,#dce7f1)}
+.film-hero-content{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:5vw;align-items:end;padding-top:clamp(38px,5vw,82px);padding-bottom:clamp(40px,5vw,75px);background:linear-gradient(135deg,#f3f1fc,#dce7f1 76%)}
 .film-hero-content h1{font-size:clamp(64px,8vw,124px);letter-spacing:-.075em;line-height:.98;margin-top:18px;font-weight:550}
-.film-hero-content h1 em{font-family:var(--font-serif),Georgia,serif;font-weight:500;font-style:italic;color:#466180}
+.film-hero-content h1 em{font-family:var(--font-serif),Georgia,serif;font-weight:500;font-style:italic;color:#6555a3}
+.film-hero .btn-primary{background:#342b65;border-color:#342b65}
+.film-hero .btn-primary:hover{background:#514395}
 .film-hero-intro>p{font-size:clamp(17px,1.45vw,22px);line-height:1.55;max-width:470px;color:#32445b}
 .film-hero-intro .cta-row{margin-top:28px;gap:22px}
 .film-hero-services{display:flex;gap:30px;justify-content:space-between;padding-top:19px;padding-bottom:19px;border-top:1px solid #c7d3df;background:#dce7f1;color:#425875;font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.13em}
@@ -180,4 +182,4 @@ button{cursor:pointer}
 .new-footer{background:#e8f0f7}
 @media(max-width:850px){.film-hero-content{grid-template-columns:1fr;gap:24px}.film-hero-intro{max-width:620px}}
 @media(max-width:600px){.studio-hero-art{height:clamp(290px,78vw,420px)}.studio-hero-video{object-fit:cover;object-position:center}.film-hero-content{padding-top:42px;padding-bottom:46px;gap:23px}.film-hero-content h1{font-size:clamp(57px,13vw,82px)}.film-hero-services{gap:12px;flex-wrap:wrap;font-size:9px}.film-hero-intro .cta-row{gap:18px}.new-header nav.is-open{background:#eef4fa}}
-@media(prefers-reduced-motion:reduce){.studio-hero-video{display:none}.studio-hero-art{background:#121c27 url("/media/alpha-narrative-end.jpg") center/cover no-repeat}}
+@media(prefers-reduced-motion:reduce){.studio-hero-video{display:none}.studio-hero-art{background:#11172e url("/media/alpha-narrative-future-end.jpg") center/cover no-repeat}}

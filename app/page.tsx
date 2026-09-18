@@ -10,8 +10,8 @@ export default async function Home() {
   return <div className="site-canvas">
     <section className="film-hero" aria-labelledby="hero-title">
       <div className="studio-hero-art">
-        <video className="studio-hero-video" autoPlay muted loop playsInline preload="metadata" poster="/media/alpha-narrative-motion.jpg" aria-label="An original animation of technology progressing from one signal into a connected system, ending with the Alpha Narrative logo">
-          <source src="/media/alpha-narrative-motion.mp4" type="video/mp4" />
+        <video className="studio-hero-video" autoPlay muted loop playsInline preload="metadata" poster="/media/alpha-narrative-future.jpg" aria-label="An original colourful technology animation ending with the Alpha Narrative logo">
+          <source src="/media/alpha-narrative-future.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="film-hero-content page-shell">
