@@ -16,7 +16,8 @@ button{cursor:pointer}
 .eyebrow{font-family:var(--font-mono),monospace;font-size:11px!important;letter-spacing:.15em;text-transform:uppercase;color:#50627c}
 .new-header{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff;position:relative;z-index:20;border-bottom:1px solid #e9ecee}
 .new-logo{display:inline-flex;align-items:center;gap:14px;white-space:nowrap;color:var(--ink)}
-.new-logo span{font-size:30px;font-weight:500;letter-spacing:-.15em;line-height:1;padding-right:5px}
+.new-logo .brand-mark{display:block;position:relative;width:50px;height:42px;overflow:hidden;flex:none}
+.new-logo .brand-mark img{position:absolute;width:100px;max-width:none;height:auto;left:-24px;top:0;filter:brightness(0)}
 .new-logo b{font-size:12px;letter-spacing:.14em;font-weight:700}
 .new-header nav{display:flex;align-items:center;gap:34px;font-size:13px}
 .new-header nav a:hover,.new-header nav a[aria-current=page]{color:var(--blue)}
