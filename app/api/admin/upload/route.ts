@@ -4,6 +4,7 @@ import { isAdmin } from "../../../../lib/admin-auth";
 
 export async function POST(request: Request) {
   if (!await isAdmin()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (process.env.VERCEL_ENV !== "production") return NextResponse.json({ error: "Uploads are available only on the production site." }, { status: 403 });
   if (new URL(request.url).origin !== request.headers.get("origin")) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
   const form = await request.formData();
   const file = form.get("image");
