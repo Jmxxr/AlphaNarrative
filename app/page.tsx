@@ -8,15 +8,17 @@ const services = [
 export default async function Home() {
   const featured = (await getPublishedProjects()).filter((project) => project.featured).slice(0, 3);
   return <div className="site-canvas">
-    <section className="new-hero page-shell">
-      <div className="hero-text">
-        <p className="eyebrow">Independent technology studio · Port Harcourt, Nigeria</p>
-        <h1>Build what moves<br />your business <em>forward.</em></h1>
-        <p className="hero-lede">We design and build software, websites and mobile products that make business easier to run and better to experience.</p>
-        <div className="cta-row"><Link className="btn-primary" href="/contact">Start a project <span>↗</span></Link><Link className="quiet-link" href="/work">Explore our work ↗</Link></div>
+    <section className="film-hero" aria-labelledby="hero-title">
+      <div className="film-hero-media">
+        <video className="film-hero-video" autoPlay muted loop playsInline preload="metadata" poster="/media/alpha-hero-poster.jpg" aria-hidden="true">
+          <source src="/media/alpha-hero.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div className="hero-art" aria-hidden="true"><div className="art-line one" /><div className="art-line two" /><div className="art-pane back" /><div className="art-pane mid" /><div className="art-pane front"><span>IDEAS<br />SYSTEMS<br />PROGRESS</span></div><small>ALPHA / NARRATIVE</small></div>
-      <div className="hero-footer"><span>Software</span><span>Web & hosting</span><span>Mobile experiences</span><span>Connected operations</span></div>
+      <div className="film-hero-content page-shell">
+        <div><p className="eyebrow">Independent technology studio · Port Harcourt, Nigeria</p><h1 id="hero-title">Ideas made <em>real.</em></h1></div>
+        <div className="film-hero-intro"><p>We create software, websites and mobile experiences that help businesses move forward.</p><div className="cta-row"><Link className="btn-primary" href="/contact">Start a project <span>↗</span></Link><Link className="quiet-link" href="/work">See our work ↗</Link></div></div>
+      </div>
+      <div className="film-hero-services page-shell"><span>Business software</span><span>Web & hosting</span><span>Mobile apps</span></div>
     </section>
     <section className="intro-section page-shell">
       <p className="eyebrow">What we believe</p>
