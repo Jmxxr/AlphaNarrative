@@ -163,21 +163,8 @@ button{cursor:pointer}
 .btn-primary:hover,.nav-contact:hover{background:#304d70}
 .site-canvas{background:var(--paper)}
 .film-hero{background:#e2ebf4;color:var(--ink);overflow:hidden}
-.studio-hero-art{height:clamp(390px,48vw,650px);position:relative;overflow:hidden;background:#182636;color:#f2f5f4}
-.studio-art-grid{position:absolute;inset:0;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:78px 78px;mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent);opacity:.45}
-.studio-art-rail{position:absolute;top:28px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;gap:20px;font:500 10px var(--font-mono),monospace;letter-spacing:.16em;color:#b9c5cd}
-.studio-art-workspace{position:absolute;inset:18% 7% 15%;display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,34px);perspective:1100px}
-.studio-art-line{position:absolute;top:49%;left:-10%;width:120%;height:1px;background:linear-gradient(90deg,transparent,#b2ced3 20%,#b2ced3 80%,transparent);box-shadow:0 0 25px #b2ced385;animation:studio-line 9s ease-in-out infinite}
-.studio-art-card{position:relative;width:min(27%,340px);height:clamp(190px,22vw,300px);padding:clamp(17px,2vw,30px);background:#e8edf0;color:#172536;border:1px solid #fff9;box-shadow:18px 25px 48px #050c1680;display:flex;flex-direction:column;transform:rotate(-4deg);animation:studio-float 8s ease-in-out infinite}
-.studio-art-card small{font:600 10px var(--font-mono),monospace;letter-spacing:.15em;color:#536b7e}
-.studio-art-card-title{font-size:clamp(17px,2.2vw,32px);letter-spacing:-.06em;line-height:1.13;margin-top:clamp(16px,2.7vw,40px);max-width:220px;font-weight:650}
-.studio-art-card-one i{display:block;height:6px;width:65%;background:#bbcbd2;margin-top:11px}.studio-art-card-one i:first-of-type{margin-top:auto;width:78%}.studio-art-card-one i:last-of-type{width:45%}
-.studio-art-card-two{background:#d3e0e6;transform:translateY(-18px);animation-delay:-2s}
-.studio-art-layout{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:8px;height:28%}.studio-art-layout b{background:#a3bbc6}.studio-art-layout b:first-child{grid-column:1/-1;background:#29445b}
-.studio-art-card-three{background:#e9e6de;transform:rotate(4deg);animation-delay:-4s}
-.studio-art-bars{height:27%;margin-top:auto;display:flex;align-items:end;gap:7px;border-bottom:1px solid #9aaab4}.studio-art-bars b{width:18%;height:45%;background:#8199a7}.studio-art-bars b:nth-child(2){height:74%}.studio-art-bars b:nth-child(3){height:58%}.studio-art-bars b:nth-child(4){height:90%;background:#2a465c}.studio-art-bars b:nth-child(5){height:70%}
-.studio-art-caption{position:absolute;bottom:25px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;font:500 11px var(--font-mono),monospace;letter-spacing:.1em;color:#c9d6db}
-@keyframes studio-float{50%{translate:0 -12px}}@keyframes studio-line{50%{transform:translateY(26px);opacity:.55}}
+.studio-hero-art{height:clamp(390px,48vw,650px);position:relative;overflow:hidden;background:#121c27}
+.studio-hero-video{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .film-hero-content{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:5vw;align-items:end;padding-top:clamp(38px,5vw,82px);padding-bottom:clamp(40px,5vw,75px);background:linear-gradient(135deg,#eef4fa,#dce7f1)}
 .film-hero-content h1{font-size:clamp(64px,8vw,124px);letter-spacing:-.075em;line-height:.98;margin-top:18px;font-weight:550}
 .film-hero-content h1 em{font-family:var(--font-serif),Georgia,serif;font-weight:500;font-style:italic;color:#466180}
@@ -191,6 +178,6 @@ button{cursor:pointer}
 .approach-section{background:#d7e3ee}
 .new-final-cta{background:#cddbe9}
 .new-footer{background:#e8f0f7}
-@media(max-width:850px){.film-hero-content{grid-template-columns:1fr;gap:24px}.film-hero-intro{max-width:620px}.studio-art-workspace{inset:22% 4% 16%}.studio-art-card{width:31%}}
-@media(max-width:600px){.studio-hero-art{height:350px}.studio-art-rail span:last-child{display:none}.studio-art-workspace{inset:22% 4% 18%;gap:8px}.studio-art-card{width:33%;height:190px;padding:12px;box-shadow:8px 14px 25px #050c1680}.studio-art-card small{font-size:7px}.studio-art-card-title{font-size:16px;line-height:1.1;margin-top:26px}.studio-art-card-one i{height:4px;margin-top:6px}.studio-art-caption{font-size:9px}.film-hero-content{padding-top:42px;padding-bottom:46px;gap:23px}.film-hero-content h1{font-size:clamp(57px,13vw,82px)}.film-hero-services{gap:12px;flex-wrap:wrap;font-size:9px}.film-hero-intro .cta-row{gap:18px}.new-header nav.is-open{background:#eef4fa}}
-@media(prefers-reduced-motion:reduce){.studio-art-card,.studio-art-line{animation:none}}
+@media(max-width:850px){.film-hero-content{grid-template-columns:1fr;gap:24px}.film-hero-intro{max-width:620px}}
+@media(max-width:600px){.studio-hero-art{height:clamp(290px,78vw,420px)}.studio-hero-video{object-fit:cover;object-position:center}.film-hero-content{padding-top:42px;padding-bottom:46px;gap:23px}.film-hero-content h1{font-size:clamp(57px,13vw,82px)}.film-hero-services{gap:12px;flex-wrap:wrap;font-size:9px}.film-hero-intro .cta-row{gap:18px}.new-header nav.is-open{background:#eef4fa}}
+@media(prefers-reduced-motion:reduce){.studio-hero-video{display:none}.studio-hero-art{background:#121c27 url("/media/alpha-narrative-end.jpg") center/cover no-repeat}}
