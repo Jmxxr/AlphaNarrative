@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
-import { adminConfigured, adminCookie, createSession, passwordMatches } from "../../../../lib/admin-auth";
+import { adminConfigured, adminCookie, adminSessionExpiry, createSession, passwordMatches } from "../../../../lib/admin-auth";
+
+export async function GET() {
+  const expiresAt = await adminSessionExpiry();
+  if (expiresAt === null) return NextResponse.json({ error: "Unauthorized" }, { status: 401, headers: { "Cache-Control": "no-store" } });
+  return NextResponse.json({ expiresAt }, { headers: { "Cache-Control": "no-store" } });
+}
 
 export async function POST(request: Request) {
   if (!adminConfigured()) return NextResponse.json({ error: "Admin setup is incomplete." }, { status: 503 });
