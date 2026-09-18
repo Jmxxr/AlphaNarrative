@@ -9,10 +9,16 @@ export default async function Home() {
   const featured = (await getPublishedProjects()).filter((project) => project.featured).slice(0, 3);
   return <div className="site-canvas">
     <section className="film-hero" aria-labelledby="hero-title">
-      <div className="film-hero-media">
-        <video className="film-hero-video" autoPlay muted loop playsInline preload="metadata" poster="/media/alpha-hero-poster.jpg" aria-hidden="true">
-          <source src="/media/alpha-hero.mp4" type="video/mp4" />
-        </video>
+      <div className="studio-hero-art" aria-hidden="true">
+        <div className="studio-art-grid" />
+        <div className="studio-art-rail"><span>ALPHA NARRATIVE / STUDIO</span><span>STRATEGY · DESIGN · ENGINEERING</span></div>
+        <div className="studio-art-workspace">
+          <div className="studio-art-line" />
+          <div className="studio-art-card studio-art-card-one"><small>01 / DISCOVER</small><span className="studio-art-card-title">Understand the challenge.</span><i /><i /><i /></div>
+          <div className="studio-art-card studio-art-card-two"><small>02 / DESIGN</small><span className="studio-art-card-title">Shape the experience.</span><div className="studio-art-layout"><b /><b /><b /></div></div>
+          <div className="studio-art-card studio-art-card-three"><small>03 / BUILD</small><span className="studio-art-card-title">Make it work.</span><div className="studio-art-bars"><b /><b /><b /><b /><b /></div></div>
+        </div>
+        <div className="studio-art-caption"><span>Built with purpose.</span><span>Made for people.</span></div>
       </div>
       <div className="film-hero-content page-shell">
         <div><p className="eyebrow">Independent technology studio · Port Harcourt, Nigeria</p><h1 id="hero-title">Ideas made <em>real.</em></h1></div>
