@@ -29,10 +29,16 @@
     "summary": "A digital home for a Nigerian luxury fashion brand.",
     "challenge": "Create an online presence that reflects the brand's ambition and gives customers a comfortable way to explore its world.",
     "solution": "A responsive brand website with deliberate typography, product presentation and a clear path from discovery to inquiry.",
-    "journey": ["Meet the brand.", "Explore its products and collections.", "Find the next step to connect or purchase."],
+    "journey": [
+      "Meet the brand.",
+      "Explore its products and collections.",
+      "Find the next step to connect or purchase."
+    ],
     "outcome": "A live digital flagship for the brand.",
-    "image": "",
-    "gallery": [],
+    "image": "https://alphanarrative.pro/projects/56885900a012a0ce810d42de471237b1.png",
+    "gallery": [
+      "https://alphanarrative.pro/projects/669f817800adc576e801bbcc7390251f.png"
+    ],
     "videoUrl": "",
     "liveUrl": "https://jmxr-luxury.onrender.com",
     "featured": true,
@@ -46,7 +52,11 @@
     "summary": "A connected business space for entrepreneurs.",
     "challenge": "Small businesses often manage visibility, trade and operations through disconnected tools.",
     "solution": "A product concept bringing business profiles, commerce, payments and operational tools into one workspace.",
-    "journey": ["Create a business space.", "Set up a profile.", "Explore connected tools as the platform develops."],
+    "journey": [
+      "Create a business space.",
+      "Set up a profile.",
+      "Explore connected tools as the platform develops."
+    ],
     "outcome": "An active product direction, presented as work in progress.",
     "image": "",
     "gallery": [],
