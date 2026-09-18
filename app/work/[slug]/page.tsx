@@ -5,11 +5,13 @@ import { getPublishedProjects } from "../../../lib/projects";
 
 type PageProps = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const project = (await getPublishedProjects()).find((item) => item.slug === (await params).slug);
+  const { slug } = await params;
+  const project = (await getPublishedProjects()).find((item) => item.slug === slug);
   return project ? { title: project.title, description: project.summary } : { title: "Project" };
 }
 export default async function ProjectPage({ params }: PageProps) {
-  const project = (await getPublishedProjects()).find((item) => item.slug === (await params).slug);
+  const { slug } = await params;
+  const project = (await getPublishedProjects()).find((item) => item.slug === slug);
   if (!project) notFound();
   return <div className="site-canvas">
     <section className="interior-hero case-hero page-shell"><Link href="/work" className="quiet-link">← All work</Link><p className="eyebrow">{project.category} / {project.status}</p><h1>{project.title}</h1><p>{project.summary}</p><div className="cta-row">{project.liveUrl && <a className="btn-primary" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Explore the live product ↗</a>}<a className="quiet-link" href="#journey">Follow the experience ↓</a></div></section>
