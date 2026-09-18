@@ -37,6 +37,8 @@ export async function adminSessionExpiry(): Promise<number | null> {
   const [expiry, signature] = value.split(".");
   if (!/^\d{10}$/.test(expiry) || !/^[a-f0-9]{64}$/.test(signature)) return null;
   if (Number(expiry) <= Math.floor(Date.now() / 1000)) return null;
+  // Reject older eight-hour cookies when the new shorter policy is deployed.
+  if (Number(expiry) > Math.floor(Date.now() / 1000) + lifetime) return null;
   return timingSafeEqual(Buffer.from(signature, "hex"), Buffer.from(sign(expiry), "hex")) ? Number(expiry) * 1000 : null;
 }
 
