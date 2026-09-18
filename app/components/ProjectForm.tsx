@@ -1,17 +1,11 @@
 "use client";
-
 import { useState } from "react";
-
-export function ProjectForm(){
-  const [status,setStatus]=useState<"idle"|"sending"|"sent"|"error">("idle");
-  async function submit(event:React.FormEvent<HTMLFormElement>){event.preventDefault();setStatus("sending");const form=event.currentTarget;const data=Object.fromEntries(new FormData(form));try{const response=await fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});if(!response.ok)throw new Error();form.reset();setStatus("sent")}catch{setStatus("error")}}
-  return <form className="project-form" onSubmit={submit}>
-    <label>Your name<input name="name" required placeholder="Full name" /></label>
-    <label>Work email<input name="email" type="email" required placeholder="you@company.com" /></label>
-    <label>Company<input name="company" required placeholder="Business or organisation" /></label>
-    <label>What do you need?<select name="service" required defaultValue=""><option value="" disabled>Select an engagement</option><option>Website or digital product</option><option>AI and automation</option><option>Private business system</option><option>Complete Business OS</option><option>Not sure yet</option></select></label>
-    <label>What needs to change?<textarea name="message" required placeholder="Tell us about the business, the problem and the result you want…" /></label>
-    <button className="button button-light" disabled={status==="sending"}>{status==="sending"?"Sending…":"Submit project brief"}<span>↗</span></button>
-    <p className={`form-status ${status==="sent"?"success":status==="error"?"error":""}`} role="status">{status==="sent"?"Your brief has been sent. We will be in touch soon.":status==="error"?"We could not send that. Email us directly instead.":""}</p>
-  </form>
+export function ProjectForm() {
+  const [status, setStatus] = useState<"idle"|"sending"|"sent"|"error">("idle");
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault(); setStatus("sending"); const form = event.currentTarget;
+    try { const response = await fetch("/api/contact", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(Object.fromEntries(new FormData(form))) }); if(!response.ok) throw new Error(); form.reset(); setStatus("sent"); }
+    catch { setStatus("error"); }
+  }
+  return <form className="new-form" onSubmit={submit}><label>Your name<input name="name" required maxLength={100} placeholder="Full name" /></label><label>Email address<input name="email" type="email" required maxLength={160} placeholder="you@company.com" /></label><label>Business name<input name="company" required maxLength={140} placeholder="Your business or organisation" /></label><label>What can we help with?<select name="service" required defaultValue=""><option value="" disabled>Select a service</option><option>Business software</option><option>Business or corporate website</option><option>Agency website</option><option>E-commerce website</option><option>Portfolio website</option><option>Landing page</option><option>Website redesign</option><option>Performance optimization</option><option>Hosting and ongoing care</option><option>Mobile app</option><option>Something else</option></select></label><label>Tell us about your project<textarea name="message" required maxLength={4000} rows={5} placeholder="What are you trying to make easier or better?" /></label><button className="btn-primary" disabled={status==="sending"}>{status==="sending"?"Sending…":"Send project brief ↗"}</button><p role="status">{status==="sent"?"Thanks. Your message has been sent.":status==="error"?"We could not send your brief. Please use WhatsApp or email instead.":""}</p></form>;
 }

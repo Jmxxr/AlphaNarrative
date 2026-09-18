@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "aether",
+    "title": "AETHER Electronics",
+    "category": "Commerce and business operations",
+    "status": "Product showcase",
+    "summary": "An electronics storefront connected to the tools that keep the business running.",
+    "challenge": "An electronics business needs a clear way for customers to discover products and a dependable way for staff to manage what happens after an order.",
+    "solution": "AETHER brings a public shopping experience and a private operations workspace into one connected product. The customer sees products and a simple cart; the team works with sales, stock, customers, suppliers, warranties and reporting behind the scenes.",
+    "journey": [
+      "Explore the storefront and discover electronics by category.",
+      "Review a product and add it to the cart.",
+      "Continue the purchasing conversation with the business.",
+      "The team manages stock, sales, customers and after-sales records in its private workspace."
+    ],
+    "outcome": "A connected product experience that demonstrates how a storefront and business operations can work together. The showcase currently includes sample products and content.",
+    "image": "",
+    "gallery": [],
+    "videoUrl": "https://scrimba.com/explain/guide0goq4ujme?fullscreen=1&embed=fullwindow",
+    "liveUrl": "https://aether-electronics.jmxr.chatgpt.site",
+    "featured": true,
+    "published": true
+  },
+  {
+    "slug": "jmxr",
+    "title": "JMXR",
+    "category": "Brand and commerce",
+    "status": "Live website",
+    "summary": "A digital home for a Nigerian luxury fashion brand.",
+    "challenge": "Create an online presence that reflects the brand's ambition and gives customers a comfortable way to explore its world.",
+    "solution": "A responsive brand website with deliberate typography, product presentation and a clear path from discovery to inquiry.",
+    "journey": ["Meet the brand.", "Explore its products and collections.", "Find the next step to connect or purchase."],
+    "outcome": "A live digital flagship for the brand.",
+    "image": "",
+    "gallery": [],
+    "videoUrl": "",
+    "liveUrl": "https://jmxr-luxury.onrender.com",
+    "featured": true,
+    "published": true
+  },
+  {
+    "slug": "osmosis",
+    "title": "OSMOSIS",
+    "category": "Business platform",
+    "status": "In development",
+    "summary": "A connected business space for entrepreneurs.",
+    "challenge": "Small businesses often manage visibility, trade and operations through disconnected tools.",
+    "solution": "A product concept bringing business profiles, commerce, payments and operational tools into one workspace.",
+    "journey": ["Create a business space.", "Set up a profile.", "Explore connected tools as the platform develops."],
+    "outcome": "An active product direction, presented as work in progress.",
+    "image": "",
+    "gallery": [],
+    "videoUrl": "",
+    "liveUrl": "",
+    "featured": false,
+    "published": true
+  }
+]

@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { ProjectVisual } from "../components/ProjectVisual";
-import { Reveal } from "../components/Reveal";
-
-export const metadata: Metadata = { title: "Work", description: "Explore products and business systems designed by Alpha Narrative." };
-const projects = [
-  { id:"aether", n:"01", title:"AETHER", copy:"A public electronics storefront and a private progressive web application working as one system—covering sales, receipts, stock, serial numbers, warranties, suppliers, staff, commissions and profit.", tags:["Commerce", "Operations", "PWA", "Automation"], kind:"aether" as const, url:"https://aether-electronics.jmxr.chatgpt.site", link:"Explore the live system" },
-  { id:"jmxr", n:"02", title:"JMXR", copy:"A digital flagship for a Nigerian luxury fashion house—designed to make the brand feel deliberate, elevated and memorable across every screen.", tags:["Luxury", "E-commerce", "Brand experience"], kind:"jmxr" as const, url:"https://jmxr-luxury.onrender.com", link:"Visit JMXR" },
-  { id:"osmosis", n:"03", title:"OSMOSIS", copy:"A personal business space for African entrepreneurs, uniting visibility, trust, commerce, payments, logistics and intelligence. Currently being developed as a full product platform.", tags:["Platform", "SME", "Fintech", "AI"], kind:"osmosis" as const },
-  { id:"paytrack", n:"04", title:"PAYTRACK", copy:"A contribution-management product for shared communities. Administrators confirm payments while residents see clear, current records without chasing paper or messages.", tags:["Payments", "Operations", "Community"], kind:"paytrack" as const },
-  { id:"business-os", n:"05", title:"ALPHA BUSINESS OS", copy:"Our adaptable operating-system concept for growing companies: a public customer experience, private management application, intelligence layer and automation engine connected around the business.", tags:["Business intelligence", "Automation", "Custom systems"], kind:"businessos" as const },
-];
-export default function WorkPage(){return <><section className="inner-hero page-shell"><p className="section-index">WORK / 02</p><h1>Proof through<br /><span className="display-title"><em>products.</em></span></h1><p>Selected ventures, demonstrations and systems that show how we think—from customer-facing experiences to the infrastructure behind them.</p></section><section className="work-list section page-shell">{projects.map(p=><article className="work-case" id={p.id} key={p.id}><Reveal><div className="work-case-head"><small>{p.n}</small><h2>{p.title}</h2><div><p>{p.copy}</p><div className="tag-list">{p.tags.map(tag=><span key={tag}>{tag}</span>)}</div></div></div><ProjectVisual kind={p.kind} />{p.url&&<div className="work-case-actions"><a href={p.url} target="_blank" rel="noreferrer">{p.link} ↗</a></div>}</Reveal></article>)}</section></>}
+import Link from "next/link";
+import { getPublishedProjects } from "../../lib/projects";
+export const metadata: Metadata = { title: "Work", description: "Explore the websites, applications and business systems built by Alpha Narrative." };
+export default async function WorkPage() {
+  const projects = await getPublishedProjects();
+  return <div className="site-canvas"><section className="interior-hero page-shell"><p className="eyebrow">Our work</p><h1>Products made to <em>be used.</em></h1><p>Explore the thinking, experience and working systems behind selected projects. Every project has its own story.</p></section>
+    <section className="portfolio-section page-shell">{projects.map((project, index) => <Link className={index === 0 ? "portfolio-card main-card" : "portfolio-card"} key={project.slug} href={`/work/${project.slug}`}><div className="portfolio-copy"><span className="eyebrow">{project.category} / {project.status}</span><h2>{project.title}</h2><p>{project.summary}</p><span className="case-link">Explore project ↗</span></div><div className={`portfolio-art project-${project.slug}`}>{project.image ? <img src={project.image} alt="" /> : <div className="art-wordmark">{project.title}<small>{project.category}</small></div>}</div></Link>)}</section>
+    <section className="new-final-cta page-shell"><p className="eyebrow">Your idea could be next</p><h2>What should we build together?</h2><Link className="btn-primary" href="/contact">Start a project ↗</Link></section></div>;
+}
