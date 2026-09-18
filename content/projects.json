@@ -45,28 +45,5 @@
     "liveUrl": "https://jmxr-luxury.onrender.com",
     "featured": true,
     "published": true
-  },
-  {
-    "slug": "osmosis",
-    "title": "OSMOSIS",
-    "category": "Business platform",
-    "status": "In development",
-    "summary": "A connected business space for entrepreneurs.",
-    "challenge": "Small businesses often manage visibility, trade and operations through disconnected tools.",
-    "solution": "A product concept bringing business profiles, commerce, payments and operational tools into one workspace.",
-    "journey": [
-      "Create a business space.",
-      "Set up a profile.",
-      "Explore connected tools as the platform develops."
-    ],
-    "outcome": "An active product direction, presented as work in progress.",
-    "image": "https://alphanarrative.pro/projects/c49753df23a5bc45b0b68a512f9e96ad.png",
-    "gallery": [
-      "https://alphanarrative.pro/projects/9c03e6c0e716739e5256a7723966dc93.png"
-    ],
-    "videoUrl": "",
-    "liveUrl": "",
-    "featured": true,
-    "published": true
   }
 ]
