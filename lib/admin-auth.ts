@@ -2,7 +2,7 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
 const cookieName = "alpha_admin";
-const lifetime = 60 * 60 * 8;
+const lifetime = 60 * 15;
 
 function secret() {
   return process.env.ADMIN_SESSION_SECRET;
@@ -30,17 +30,21 @@ export function createSession() {
   return `${payload}.${sign(payload)}`;
 }
 
-export async function isAdmin() {
-  if (!adminConfigured()) return false;
+export async function adminSessionExpiry(): Promise<number | null> {
+  if (!adminConfigured()) return null;
   const value = (await cookies()).get(cookieName)?.value;
-  if (!value) return false;
+  if (!value) return null;
   const [expiry, signature] = value.split(".");
-  if (!/^\d{10}$/.test(expiry) || !/^[a-f0-9]{64}$/.test(signature)) return false;
-  if (Number(expiry) <= Math.floor(Date.now() / 1000)) return false;
-  return timingSafeEqual(Buffer.from(signature, "hex"), Buffer.from(sign(expiry), "hex"));
+  if (!/^\d{10}$/.test(expiry) || !/^[a-f0-9]{64}$/.test(signature)) return null;
+  if (Number(expiry) <= Math.floor(Date.now() / 1000)) return null;
+  return timingSafeEqual(Buffer.from(signature, "hex"), Buffer.from(sign(expiry), "hex")) ? Number(expiry) * 1000 : null;
+}
+
+export async function isAdmin() {
+  return (await adminSessionExpiry()) !== null;
 }
 
 export const adminCookie = {
   name: cookieName,
-  options: { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict" as const, path: "/", maxAge: lifetime }
+  options: { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict" as const, path: "/" }
 };
