@@ -1,10 +1,6 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-const links = [["Services","/services"],["Work","/work"],["Process","/process"],["About","/about"]];
-export function Navigation() {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-  return <header className="new-header page-shell"><Link className="new-logo" href="/" onClick={() => setOpen(false)} aria-label="Alpha Narrative home"><span className="brand-mark" aria-hidden="true"><img src="/brand/alpha-narrative-logo.png" alt="" /></span><b>ALPHA NARRATIVE</b></Link><nav aria-label="Main navigation" className={open ? "is-open" : ""}>{links.map(([label, href]) => <Link key={href} href={href} aria-current={pathname===href ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>)}<Link className="mobile-contact" href="/contact" onClick={() => setOpen(false)}>Let's talk ↗</Link></nav><Link className="nav-contact" href="/contact">Let's talk ↗</Link><button className="nav-toggle" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen(!open)}><span /><span /></button></header>;
-}
+'use client';
+import {useState} from 'react';
+import {usePathname} from 'next/navigation';
+import Link from 'next/link';
+const links=[['/journal','The Journal'],['/about','About'],['/advertise','Advertise'],['/contact','Contact']];
+export function Navigation(){const [open,setOpen]=useState(false);const pathname=usePathname();return <header className="site-header"><div className="header-main"><Link className="logo" href="/" onClick={()=>setOpen(false)}>Alpha Narrative<span className="dot">.</span></Link><nav className="desktop-nav" aria-label="Main navigation">{links.map(([href,label])=><Link key={href} href={href} aria-current={pathname===href?'page':undefined}>{label}</Link>)}</nav><Link className="header-search" href="/journal?search=1" aria-label="Search the journal"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></Link><button className="menu-toggle" aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} aria-controls="mobile-navigation" onClick={()=>setOpen(!open)}>{open?'Close ✕':'Menu ☰'}</button></div><div className="header-bottom"><p>Independent perspectives. A world of stories.</p><nav className="category-nav" aria-label="Explore categories">{['Culture','Money','Technology','Ambition'].map(c=><Link key={c} href={'/category/'+c.toLowerCase()} aria-current={pathname==='/category/'+c.toLowerCase()?'page':undefined}>{c}<span aria-hidden="true">↗</span></Link>)}</nav></div>{open&&<nav className="mobile-navigation" id="mobile-navigation" aria-label="Mobile navigation">{links.map(([href,label])=><Link key={href} href={href} onClick={()=>setOpen(false)}>{label}<span>↗</span></Link>)}<form action="/journal"><label htmlFor="mobile-search">Search stories</label><div><input id="mobile-search" name="q" type="search" placeholder="What interests you?"/><button>Search ↗</button></div></form></nav>}</header>;}

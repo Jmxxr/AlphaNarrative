@@ -1,3 +1,4 @@
+import {sameOrigin} from '../../../../lib/request-origin';
 import { NextResponse } from "next/server";
 import { adminConfigured, adminCookie, adminSessionExpiry, createSession, passwordMatches } from "../../../../lib/admin-auth";
 
@@ -9,7 +10,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   if (!adminConfigured()) return NextResponse.json({ error: "Admin setup is incomplete." }, { status: 503 });
-  if (new URL(request.url).origin !== request.headers.get("origin")) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
+  if (!sameOrigin(request)) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
   const body = await request.json().catch(() => ({}));
   if (typeof body.password !== "string" || !passwordMatches(body.password)) return NextResponse.json({ error: "Incorrect password." }, { status: 401 });
   const response = NextResponse.json({ ok: true });
@@ -18,7 +19,7 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  if (new URL(request.url).origin !== request.headers.get("origin")) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
+  if (!sameOrigin(request)) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
   const response = NextResponse.json({ ok: true });
   response.cookies.delete(adminCookie.name);
   return response;

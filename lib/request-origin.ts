@@ -1,0 +1,2 @@
+/** Compare browser origin against the original Host, which Next may normalize in request.url. */
+export function sameOrigin(request:Request){const raw=request.headers.get('origin');if(!raw)return false;try{const origin=new URL(raw);const target=new URL(request.url);const host=request.headers.get('host')||target.host;return (origin.protocol==='https:'||origin.protocol==='http:')&&origin.protocol===target.protocol&&origin.host===host&&origin.origin===raw;}catch{return false;}}
