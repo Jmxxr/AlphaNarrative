@@ -16,12 +16,12 @@ export async function POST(request: Request) {
   const ext = png ? "png" : jpeg ? "jpg" : webp ? "webp" : null;
   if (!ext) return NextResponse.json({ error: "Only valid PNG, JPEG and WebP images are accepted." }, { status: 400 });
   const name = randomBytes(16).toString("hex") + "." + ext;
-  const response = await fetch(`https://api.github.com/repos/Jmxxr/AlphaNarrative/contents/public/projects/${name}`, {
+  const response = await fetch(`https://api.github.com/repos/Jmxxr/AlphaNarrative/contents/public/journal/${name}`, {
     method: "PUT",
     headers: { Authorization: `Bearer ${process.env.GITHUB_CONTENT_TOKEN}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json" },
-    body: JSON.stringify({ message: "Add case study image", content: data.toString("base64"), branch: "main" }),
+    body: JSON.stringify({ message: "Add journal image", content: data.toString("base64"), branch: "main" }),
     cache: "no-store"
   });
   if (!response.ok) return NextResponse.json({ error: "Could not upload image." }, { status: 502 });
-  return NextResponse.json({ url: `https://alphanarrative.pro/projects/${name}` });
+  return NextResponse.json({ url: `https://www.alphanarrative.pro/journal/${name}` });
 }

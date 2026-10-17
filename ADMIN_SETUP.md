@@ -17,3 +17,10 @@ Admin sessions expire 15 minutes after sign-in, and the cookie is a browser-sess
 ## Rate limiting on Vercel
 
 Set up a Vercel Firewall rate limit for POST requests to `/api/admin/session` and `/api/contact`. Use request path and method as conditions, count by IP, and respond with HTTP 429. Publish the rule in the Vercel dashboard. For Hobby (one rate limit rule per project), use a single rule with two OR condition groups: `(path equals /api/admin/session AND method equals POST) OR (path equals /api/contact AND method equals POST)`, with 5 requests per IP per 10 minutes. On Pro, two separate rules allow different thresholds for each endpoint. Check existing rules before adding one; do not remove unrelated protections. Rate limit counters are per region.
+
+
+## Journal publishing
+
+The publishing desk at `/admin` manages `content/journal.json` through `/api/admin/journal`. Existing admin credentials and the repository content token are reused. Saves commit to the production branch and trigger the existing Vercel deployment integration. The editor uses the file SHA to reject stale saves.
+
+Only published articles and enabled advertising campaigns are stored in readable form. Draft articles and inactive campaigns are encrypted with AES-256-GCM using a domain-separated key derived from `ADMIN_SESSION_SECRET`. Keep that secret backed up securely and stable: rotating it without migrating private content makes saved drafts unreadable. Never commit the secret. Public article cards receive published summaries only. The legacy project API is retained for compatibility but is not used by the journal.
