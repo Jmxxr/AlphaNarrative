@@ -1,3 +1,4 @@
+import {sameOrigin} from '../../../../lib/request-origin';
 import { randomBytes } from "node:crypto";
 import { NextResponse } from "next/server";
 import { isAdmin } from "../../../../lib/admin-auth";
@@ -5,7 +6,7 @@ import { isAdmin } from "../../../../lib/admin-auth";
 export async function POST(request: Request) {
   if (!await isAdmin()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   if (process.env.VERCEL_ENV !== "production") return NextResponse.json({ error: "Uploads are available only on the production site." }, { status: 403 });
-  if (new URL(request.url).origin !== request.headers.get("origin")) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
+  if (!sameOrigin(request)) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
   const form = await request.formData();
   const file = form.get("image");
   if (!(file instanceof File) || file.size < 1 || file.size > 4_000_000) return NextResponse.json({ error: "Choose an image smaller than 4 MB." }, { status: 400 });

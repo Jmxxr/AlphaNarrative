@@ -12,7 +12,7 @@ const incomplete=structuredClone(journal);incomplete.articles[0].image='';assert
 const campaign=structuredClone(journal);campaign.advertisements[0].enabled=true;assert(!model.validateJournal(campaign));
 const unknown=structuredClone(journal);unknown.articles[0].cat='Anything';assert(!model.validateJournal(unknown));
 let authenticated=false,lastWrite=null,conflict=false;
-const route=load('app/api/admin/journal/route.ts',{'../../../../lib/admin-auth':{isAdmin:async()=>authenticated},'../../../../lib/journal-model':model,'../../../../lib/journal-storage':storage});
+const route=load('app/api/admin/journal/route.ts',{'../../../../lib/request-origin':load('lib/request-origin.ts'),'../../../../lib/admin-auth':{isAdmin:async()=>authenticated},'../../../../lib/journal-model':model,'../../../../lib/journal-storage':storage});
 const originalFetch=global.fetch;global.fetch=async(url,options={})=>{if(options.method==='PUT'){lastWrite=JSON.parse(options.body);if(conflict)return Response.json({},{status:409});return Response.json({content:{sha:'b'.repeat(40)}});}return Response.json({content:Buffer.from(JSON.stringify(sealed)).toString('base64'),sha:'a'.repeat(40)});};
 function request(payload,origin='https://www.alphanarrative.pro'){return new Request('https://www.alphanarrative.pro/api/admin/journal',{method:'PUT',headers:{origin,'Content-Type':'application/json'},body:JSON.stringify(payload)});}
 (async()=>{

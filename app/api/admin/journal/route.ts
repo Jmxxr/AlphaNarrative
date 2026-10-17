@@ -1,3 +1,4 @@
+import {sameOrigin} from '../../../../lib/request-origin';
 import {NextResponse} from 'next/server';
 import {isAdmin} from '../../../../lib/admin-auth';
 import {openJournal,sealJournal} from '../../../../lib/journal-storage';
@@ -11,7 +12,7 @@ export async function GET(){
 export async function PUT(request:Request){
  if(!await isAdmin())return NextResponse.json({error:'Unauthorized'},{status:401});
  if(process.env.VERCEL_ENV!=='production')return NextResponse.json({error:'Save on alphanarrative.pro. Preview sites cannot publish.'},{status:403});
- if(new URL(request.url).origin!==request.headers.get('origin'))return NextResponse.json({error:'Invalid origin.'},{status:403});
+ if(!sameOrigin(request))return NextResponse.json({error:'Invalid origin.'},{status:403});
  const raw=await request.text();if(raw.length>2_000_000)return NextResponse.json({error:'Journal exceeds the save limit.'},{status:413});
  let body;try{body=JSON.parse(raw);}catch{return NextResponse.json({error:'Invalid journal data.'},{status:400});}
  if(!validateJournal(body.journal)||typeof body.sha!=='string'||! /^[a-f0-9]{40}$/.test(body.sha))return NextResponse.json({error:'Check article addresses, required publishing fields, and advertisement links. Each article address must be unique.'},{status:400});

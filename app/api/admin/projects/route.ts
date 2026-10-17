@@ -1,3 +1,4 @@
+import {sameOrigin} from '../../../../lib/request-origin';
 import { NextResponse } from "next/server";
 import { isAdmin } from "../../../../lib/admin-auth";
 import { getProjects, validateProjects } from "../../../../lib/projects";
@@ -11,7 +12,7 @@ export async function GET() {
 export async function PUT(request: Request) {
   if (!await isAdmin()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   if (process.env.VERCEL_ENV !== "production") return NextResponse.json({ error: "Publishing is available only on the production site." }, { status: 403 });
-  if (new URL(request.url).origin !== request.headers.get("origin")) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
+  if (!sameOrigin(request)) return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
   const raw = await request.text();
   if (raw.length > 250_000) return NextResponse.json({ error: "Too much content." }, { status: 413 });
   let projects: unknown;
