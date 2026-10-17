@@ -78,7 +78,7 @@
         ],
         [
           "Choose your own definition",
-          "Stability can mean having room to handle a surprise, turn down unsuitable work or support someone you care about. Define what matters to you before borrowing someone else\u2019s picture of success. This essay offers general reflection, not personalised financial advice."
+          "Stability can mean having room to handle a surprise, turn down unsuitable work or support someone you care about. Define what matters to you before borrowing someone else’s picture of success. This essay offers general reflection, not personalised financial advice."
         ]
       ],
       "photo": {
@@ -185,6 +185,269 @@
       "featured": false,
       "publishedAt": "2026-10-17T21:27:40.000Z",
       "updatedAt": "2026-10-17T21:27:40.000Z"
+    },
+    {
+      "id": "qualities-of-a-high-value-man",
+      "title": "25 qualities of a high-value man",
+      "cat": "Ambition",
+      "desc": "Character, responsibility, and the habits behind a life you can respect—with a practical self-assessment to try.",
+      "author": "Alpha Narrative",
+      "image": "/journal/ambition.jpg",
+      "photo": {
+        "alt": "A person writing in a notebook at a cafe table",
+        "credit": "Unsplash",
+        "url": "https://unsplash.com"
+      },
+      "sections": [
+        [
+          "Start with character, not a price tag",
+          "A high-value man is easy to confuse with a man who looks successful. Money, appearance, or popularity may attract attention; they do not tell you how he handles responsibility, disappointment, or another person’s dignity.\n\nHere, the phrase is an invitation to build character. It is not a price placed on a human being. These 25 qualities describe habits worth practising, not a claim that someone who struggles with them deserves less respect."
+        ],
+        [
+          "1. Self-discipline",
+          "Doing what needs doing even when your feelings suggest an easier option."
+        ],
+        [
+          "2. Integrity",
+          "Letting your words and actions agree. Keeping a standard when nobody is there to applaud it."
+        ],
+        [
+          "3. Emotional intelligence",
+          "Recognising what you feel and managing your response instead of making everyone else carry it."
+        ],
+        [
+          "4. Self-respect",
+          "Maintaining dignity and standards without needing to put other people beneath you."
+        ],
+        [
+          "5. Accountability",
+          "Owning your mistakes, making repairs where possible, and changing the behaviour behind them."
+        ],
+        [
+          "6. Humility",
+          "Accepting that there is more to learn. Being teachable without treating yourself as worthless."
+        ],
+        [
+          "7. Self-control",
+          "Creating room between an impulse and what you spend, say, consume, or do."
+        ],
+        [
+          "8. Curiosity",
+          "Asking thoughtful questions and seeking understanding instead of performing certainty."
+        ],
+        [
+          "9. Critical thinking",
+          "Looking at evidence and assumptions before borrowing someone else’s conclusion."
+        ],
+        [
+          "10. Wisdom",
+          "Considering the longer-term consequences of a choice, not only its immediate reward."
+        ],
+        [
+          "11. Resourcefulness",
+          "Adapting, solving problems, and using what you have without waiting for perfect conditions."
+        ],
+        [
+          "12. Consistency",
+          "Returning to useful habits after the excitement of starting has faded."
+        ],
+        [
+          "13. Creativity",
+          "Seeing possibilities, developing ideas, and being willing to try an unfamiliar approach."
+        ],
+        [
+          "14. Purpose",
+          "Having a direction that makes your effort meaningful to you."
+        ],
+        [
+          "15. Hard work",
+          "Applying sustained, useful effort. Being busy matters less than doing the work that needs doing."
+        ],
+        [
+          "16. Financial discipline",
+          "Making deliberate choices about spending, saving, investing, and the obligations you take on."
+        ],
+        [
+          "17. Competence",
+          "Developing the practical skills that make people able to depend on your work."
+        ],
+        [
+          "18. Independence",
+          "Supporting yourself where possible and taking responsibility for your decisions. Asking for help is compatible with this."
+        ],
+        [
+          "19. Respectfulness",
+          "Treating people with dignity regardless of their wealth, job, status, or usefulness to you."
+        ],
+        [
+          "20. Communication",
+          "Speaking clearly, listening carefully, and handling difficult conversations without cruelty."
+        ],
+        [
+          "21. Confidence",
+          "Trusting your ability to act and learn without needing to belittle another person."
+        ],
+        [
+          "22. Leadership",
+          "Taking initiative, setting an example, and accepting responsibility for the effect you have on others."
+        ],
+        [
+          "23. Healthy boundaries",
+          "Saying no when necessary and recognising that other people have limits too."
+        ],
+        [
+          "24. Personal presentation",
+          "Caring for neatness, hygiene, health, dress, and the way you show up. It does not require expensive clothes."
+        ],
+        [
+          "25. Reliability",
+          "Respecting time, keeping commitments, and following through when the promise is no longer convenient."
+        ],
+        [
+          "Begin with one honest example",
+          "Do not turn the list into 25 reasons to criticise yourself. Think about the past seven days. Which quality did you demonstrate? Which one became difficult under pressure? Choose one behaviour you can practise this week.\n\nThe quality assessment linked below lets you rate each habit from 1 to 10, see an overall score, and copy your results. The score reflects your answers; the useful part is the next step you choose."
+        ]
+      ],
+      "published": true,
+      "featured": false,
+      "publishedAt": "2026-10-17T22:46:26.719Z",
+      "updatedAt": "2026-10-17T22:46:26.719Z"
+    },
+    {
+      "id": "the-human-server",
+      "title": "The Human Server",
+      "cat": "Technology",
+      "desc": "A café, a request, and a surprisingly human way to understand what a server actually does.",
+      "author": "Alpha Narrative",
+      "image": "/journal/internet.jpg",
+      "photo": {
+        "alt": "A laptop displaying code on a working desk",
+        "credit": "Unsplash",
+        "url": "https://unsplash.com"
+      },
+      "sections": [
+        [
+          "One coffee. A surprisingly useful lesson.",
+          "Imagine walking into a café and asking, “Can I have a coffee?” The person behind the counter listens, checks what is available, prepares your order, and hands something back.\n\nYou made a request. Someone handled it. You received a response. You have already understood the beginning of a server."
+        ],
+        [
+          "The job behind the name",
+          "In computing, server can mean the software that listens for requests and responds to them. It can also mean the computer running that software. The word makes more sense when you think about the job being done.\n\nYour browser asks for a page. The server software receives that request, follows its instructions, and sends back a response. That response might contain a webpage, a photograph, or data the page needs."
+        ],
+        [
+          "The counter is not the whole café",
+          "The person taking your order does not need to keep every ingredient in their pocket. They may ask the kitchen, check a stock list, or tell you that something has run out.\n\nLikewise, server software can read files, run other code, or ask a database for stored information. The database is closer to the organised record behind the counter than the person listening to your order. The server and the database have different jobs."
+        ],
+        [
+          "Sometimes the answer is no",
+          "Ask for something the café does not serve, and the response should explain the problem. A website also responds when a requested page cannot be found. A 404 response is one example.\n\nThe analogy has limits: real networks involve protocols, addresses, and rules. But keep the central idea. A server is not mysterious because it lives somewhere else. It is doing a job: receiving a request, handling it, and returning a response."
+        ],
+        [
+          "Now look at the page in front of you",
+          "When you opened this article, your browser requested it. Software on the hosting side returned what your browser needed to display it. You are the reader; the browser is your messenger. Somewhere behind the counter, a server answered.\n\nNext time somebody says “the server,” ask a useful question: do they mean the software answering requests, or the computer it runs on? That small distinction clears up a lot.\n\nFurther reading: [MDN: What is a web server?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)."
+        ]
+      ],
+      "published": true,
+      "featured": false,
+      "publishedAt": "2026-10-17T22:46:26.719Z",
+      "updatedAt": "2026-10-17T22:46:26.719Z"
+    },
+    {
+      "id": "ambition-needs-a-compass",
+      "title": "Ambition needs a compass, not just a destination",
+      "cat": "Ambition",
+      "desc": "What are you willing to achieve—and what are you unwilling to become in the process?",
+      "author": "Alpha Narrative",
+      "image": "/journal/creator.jpg",
+      "photo": {
+        "alt": "A photographer working on a mountain ridge",
+        "credit": "Unsplash",
+        "url": "https://unsplash.com"
+      },
+      "sections": [
+        [
+          "The destination is the easy part",
+          "A bigger business. A better income. More recognition. It is usually easier to name the result you want than the principles you intend to keep while pursuing it. Yet those principles decide what the journey will ask of you."
+        ],
+        [
+          "Name the line before you reach it",
+          "“I value honesty” sounds comfortable until honesty costs you an opportunity. A value becomes useful when it guides a specific decision. Try finishing this sentence: even if it slows my progress, I will not ____.\n\nYour answer may involve misleading a customer, humiliating a colleague, neglecting a responsibility, or pretending to possess a skill you have not learned. Give the line a name before pressure makes it convenient to move."
+        ],
+        [
+          "Choose something you can observe",
+          "Pick one goal for the coming week and one behaviour that would let you pursue it well. You might practise a skill each morning, keep a commitment you have been avoiding, or ask for feedback without defending yourself immediately.\n\nAt the end of the week, review both the work and the way you did it. Progress that repeatedly asks you to abandon your values deserves a closer look."
+        ],
+        [
+          "Become someone who can carry the result",
+          "Ambition does not have to mean wanting more than everybody else. It can mean taking your own possibilities seriously. Let your goals stretch your ability without giving them permission to shrink your character."
+        ]
+      ],
+      "published": true,
+      "featured": false,
+      "publishedAt": "2026-10-17T22:46:26.719Z",
+      "updatedAt": "2026-10-17T22:46:26.719Z"
+    },
+    {
+      "id": "when-an-opinion-becomes-a-performance",
+      "title": "When an opinion becomes a performance",
+      "cat": "Culture",
+      "desc": "You can have a view without turning every conversation into an audition.",
+      "author": "Alpha Narrative",
+      "image": "/journal/ai.jpg",
+      "photo": {
+        "alt": "A fountain pen resting on a handwritten page",
+        "credit": "Unsplash",
+        "url": "https://unsplash.com"
+      },
+      "sections": [
+        [
+          "The audience enters the room",
+          "A conversation changes when you begin imagining the applause. You choose the sharpest sentence instead of the clearest one. You hear a chance to win instead of a person trying to explain. The topic becomes a stage."
+        ],
+        [
+          "Ask what the exchange is for",
+          "Some conversations are playful arguments. Others are attempts to solve something or understand an experience. Trouble starts when one person is trying to learn and the other is trying to perform.\n\nBefore answering, ask yourself what would make the exchange useful. It might be a question, a careful disagreement, or an honest “I have not thought about that enough.”"
+        ],
+        [
+          "Try a quieter kind of confidence",
+          "State your view clearly. Give a reason. Let the other person finish. If their point changes something, acknowledge it. You do not lose your identity by improving an opinion.\n\nThe next time a discussion makes you reach for a line that will sound impressive, pause. Choose the sentence that helps the conversation move instead. Not every worthwhile thought needs an audience."
+        ]
+      ],
+      "published": true,
+      "featured": false,
+      "publishedAt": "2026-10-17T22:46:26.719Z",
+      "updatedAt": "2026-10-17T22:46:26.719Z"
+    },
+    {
+      "id": "the-cost-of-looking-established",
+      "title": "The cost of looking established",
+      "cat": "Money",
+      "desc": "Before buying the image of progress, ask what the purchase will help you do.",
+      "author": "Alpha Narrative",
+      "image": "/journal/money.jpg",
+      "photo": {
+        "alt": "Clothes displayed in a carefully arranged retail store",
+        "credit": "Unsplash",
+        "url": "https://unsplash.com"
+      },
+      "sections": [
+        [
+          "The purchase with a second job",
+          "Sometimes a purchase has two jobs: the practical thing it does and the impression it creates. A new device can support your work. It can also help you feel like somebody whose work has already succeeded. Distinguishing those jobs is worth a moment."
+        ],
+        [
+          "Let the need explain itself",
+          "Write down the problem you expect the purchase to solve. Can you describe that problem without mentioning what other people will think? What would improve in the work itself?\n\nThis does not mean every enjoyable purchase needs to earn money. Pleasure can be a valid reason. The point is to recognise your reason rather than disguise an image purchase as a business necessity."
+        ],
+        [
+          "Make room for the less visible investment",
+          "Practising, improving a process, following up with a customer, or completing unfinished work may create less excitement than a new object. They may also be closer to the problem you are trying to solve.\n\nBefore spending, compare the purchase with one practical action you could take using what you already have. Choose deliberately. This is a reflection on spending motives, not personal financial advice."
+        ]
+      ],
+      "published": true,
+      "featured": false,
+      "publishedAt": "2026-10-17T22:46:26.719Z",
+      "updatedAt": "2026-10-17T22:46:26.719Z"
     }
   ],
   "advertisements": [
