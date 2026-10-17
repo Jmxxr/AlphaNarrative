@@ -1,2 +1,2 @@
-import {redirect} from 'next/navigation';
-export default function Page(){redirect('/about');}
+import {permanentRedirect} from 'next/navigation';
+export default function Page(){permanentRedirect('/about');}

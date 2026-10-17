@@ -10,8 +10,9 @@ export const metadata: Metadata = {
   title: { default: 'Alpha Narrative — Culture, Money, Technology & Ambition', template: '%s | Alpha Narrative' },
   description: 'An independent journal exploring culture, money, technology, and ambition. Entertain the masses. Educate the interested. Empower the few.',
   applicationName: 'Alpha Narrative',
+  category: 'Independent online publication',
   alternates: {types: {'application/rss+xml':'/feed.xml'}},
-  openGraph: { type: 'website', siteName: 'Alpha Narrative', locale: 'en_NG', images: ['/journal/attention.jpg'] },
+  openGraph: { type: 'website', siteName: 'Alpha Narrative', locale: 'en_NG', title: 'Alpha Narrative — Culture, Money, Technology & Ambition', description: 'Independent stories and thoughtful perspectives on culture, money, technology, and ambition.', images: ['/journal/attention.jpg'] },
   twitter: { card: 'summary_large_image' },
   icons: { icon: '/favicon.ico?v=alpha-original', apple: '/apple-icon.png' },
 };
