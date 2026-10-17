@@ -1,13 +1,2 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-export const metadata: Metadata = { title: "Services", description: "Business software, websites and hosting, and mobile applications from Alpha Narrative." };
-const services = [
-  { number: "01", id: "software", title: "Business Software Solutions", lead: "Systems that fit the way your business actually works.", detail: "We design software that helps teams keep work organised, information connected and decisions clearer. AI and automation belong where they solve a real operational problem.", items: ["Custom business platforms", "Sales and inventory systems", "Customer and staff portals", "Dashboards and reporting", "Integrations and workflow automation"] },
-  { number: "02", id: "web", title: "Web Development & Hosting", lead: "An online presence people can understand, trust and use.", detail: "From a focused landing page to a full online store, we build responsive websites with clear content, sound foundations and dependable deployment.", items: ["Corporate and business websites", "Agency websites", "E-commerce websites", "Portfolio websites", "Landing pages", "Website redesign", "Performance optimization", "Hosting and ongoing care"] },
-  { number: "03", id: "mobile", title: "Mobile App Development", lead: "Mobile products designed for the people carrying them.", detail: "We plan and build mobile experiences that make the important tasks feel straightforward, with the supporting systems needed to keep them useful.", items: ["Customer-facing applications", "Internal team applications", "Mobile commerce experiences", "Product design and prototypes", "API and backend integration"] }
-];
-export default function ServicesPage() {
-  return <div className="site-canvas"><section className="interior-hero page-shell"><p className="eyebrow">Services</p><h1>Technology shaped around <em>your business.</em></h1><p>Tell us the problem first. We’ll help define the product, experience and engineering needed to solve it.</p></section>
-    <section className="service-detail-section page-shell">{services.map((service) => <article className="service-detail" id={service.id} key={service.id}><div className="eyebrow">{service.number} / {service.title}</div><div><h2>{service.lead}</h2><p>{service.detail}</p><Link className="quiet-link" href="/contact">Discuss this service ↗</Link></div><ul>{service.items.map((item) => <li key={item}>{item}</li>)}</ul></article>)}</section>
-    <section className="new-final-cta page-shell"><p className="eyebrow">Let’s talk</p><h2>What does your business need next?</h2><Link className="btn-primary" href="/contact">Start a project ↗</Link></section></div>;
-}
+import {redirect} from 'next/navigation';
+export default function Page(){redirect('/about');}

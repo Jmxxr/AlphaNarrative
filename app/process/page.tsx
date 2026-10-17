@@ -1,5 +1,2 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-export const metadata: Metadata = { title: "Process", description: "How Alpha Narrative plans, designs, builds and improves digital products." };
-const steps = [["01","Understand","We learn what the business needs to achieve, who uses the product and where the current experience falls short."],["02","Define","We agree on a useful scope, the user journey and what success would look like."],["03","Design and build","We turn the plan into a working product, review it with you and keep the important decisions visible."],["04","Launch and improve","We check the experience in real use, address issues and plan what comes next."]];
-export default function ProcessPage() { return <div className="site-canvas"><section className="interior-hero page-shell"><p className="eyebrow">Our process</p><h1>Clear thinking. <em>Considered execution.</em></h1><p>Every project has different needs. These are the steps that help us move from a business problem to a useful product.</p></section><section className="service-detail-section page-shell">{steps.map(([n,title,copy])=><article className="service-detail" key={n}><span className="eyebrow">{n}</span><h2>{title}</h2><p>{copy}</p></article>)}</section><section className="new-final-cta page-shell"><p className="eyebrow">Next step</p><h2>Start with a conversation.</h2><Link className="btn-primary" href="/contact">Tell us about your project ↗</Link></section></div>; }
+import {redirect} from 'next/navigation';
+export default function Page(){redirect('/about');}

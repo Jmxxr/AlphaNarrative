@@ -1,8 +1,3 @@
-import type { MetadataRoute } from "next";
-import { getPublishedProjects } from "../lib/projects";
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const routes = ["", "/services", "/work", "/process", "/about", "/contact"];
-  const base = routes.map((route, index) => ({ url: `https://alphanarrative.pro${route}`, changeFrequency: "monthly" as const, priority: index === 0 ? 1 : 0.8 }));
-  const work = (await getPublishedProjects()).map(project => ({ url: `https://alphanarrative.pro/work/${project.slug}`, changeFrequency: "monthly" as const, priority: 0.7 }));
-  return [...base, ...work];
-}
+import type {MetadataRoute} from 'next';
+import {articles,siteUrl} from '../lib/articles';
+export default function sitemap():MetadataRoute.Sitemap{return [{url:siteUrl,changeFrequency:'weekly',priority:1},{url:siteUrl+'/about',changeFrequency:'monthly',priority:0.6},...articles.map(p=>({url:siteUrl+'/stories/'+p.id,lastModified:'2026-10-17',changeFrequency:'monthly' as const,priority:0.8}))];}
