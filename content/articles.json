@@ -1,0 +1,158 @@
+[
+  {
+    "id": "attention",
+    "cat": "Culture",
+    "title": "Everyone wants your attention. What is it costing you?",
+    "desc": "The endless scroll is easy to enter and hard to leave. Here is a reason to pause.",
+    "time": 1,
+    "sections": [
+      [
+        "The price of always being available",
+        "An interesting video becomes another video. A quick check becomes a longer visit. By the time you put the phone down, the task you meant to start feels further away. The cost is not only time; it is the difficulty of returning to something that requires patience."
+      ],
+      [
+        "Ask what you came for",
+        "Entertainment deserves a place in life. A song, a joke or a great story can make a difficult day lighter. The useful question is whether you chose the experience or simply continued because another item appeared. Before opening a feed, name what you want from it."
+      ],
+      [
+        "Give your attention a destination",
+        "Choose one thing you want to finish before your next browsing break. Put the phone beyond easy reach and give that task a short, uninterrupted window. Afterwards, notice how you feel. Treat this as an experiment in choice, rather than a test of willpower."
+      ]
+    ],
+    "photo": {
+      "alt": "A hand holding a phone while browsing Instagram",
+      "credit": "Georgia de Lotz",
+      "url": "https://unsplash.com/photos/oeeRE0OuuUY"
+    }
+  },
+  {
+    "id": "creator",
+    "cat": "Culture",
+    "title": "Everyone is a creator. Who is building something that lasts?",
+    "desc": "Beyond the ring light: finding a reason to make things when nobody is watching.",
+    "time": 1,
+    "sections": [
+      [
+        "A platform is a beginning",
+        "Publishing is accessible. Sustaining a useful body of work is a different challenge. A creator needs something to return to after the excitement of the first post: a question, a craft or an audience they care about."
+      ],
+      [
+        "Build a body of work",
+        "Choose a topic you can explore from several angles. Keep notes, improve an earlier explanation and pay attention to the questions people ask. A small collection of thoughtful work gives a new reader somewhere to go next."
+      ],
+      [
+        "Try this",
+        "Write down three questions you keep returning to. Make one small piece answering the first. Give it enough care that you would still want to share it a month from now."
+      ]
+    ],
+    "photo": {
+      "alt": "A photographer working on a mountain ridge",
+      "credit": "Unsplash",
+      "url": "https://unsplash.com"
+    }
+  },
+  {
+    "id": "money",
+    "cat": "Money",
+    "title": "Looking successful and building stability are different goals.",
+    "desc": "A quieter conversation about money, status, and the choices behind the image.",
+    "time": 1,
+    "sections": [
+      [
+        "Make the goal visible to yourself",
+        "The things people can see are easier to celebrate than the things they cannot. A purchase gets noticed. A reserve for an unexpected bill usually does not. That difference can influence what we prioritise."
+      ],
+      [
+        "Know what your lifestyle asks of you",
+        "List the recurring costs you have agreed to carry. Then ask which ones support your life and which ones mainly maintain an image. This is a reflection exercise, not a rule that every pleasure needs a financial justification."
+      ],
+      [
+        "Choose your own definition",
+        "Stability can mean having room to handle a surprise, turn down unsuitable work or support someone you care about. Define what matters to you before borrowing someone else’s picture of success. This essay offers general reflection, not personalised financial advice."
+      ]
+    ],
+    "photo": {
+      "alt": "Clothes displayed in a carefully arranged retail store",
+      "credit": "Unsplash",
+      "url": "https://unsplash.com"
+    }
+  },
+  {
+    "id": "ai",
+    "cat": "Technology",
+    "title": "AI can write the words. You still need something to say.",
+    "desc": "When creating becomes easier, judgement becomes part of the work.",
+    "time": 1,
+    "sections": [
+      [
+        "Start before the prompt",
+        "A writing tool can offer fluent language without knowing what your reader most needs. Begin with your own question, observation or experience. The clearer that starting point is, the easier it becomes to judge the output."
+      ],
+      [
+        "Keep the evidence close",
+        "Separate a useful phrase from a factual claim. Check names, dates and quotations against reliable sources. If you cannot verify a claim, remove it or clearly describe the uncertainty. Smooth writing is not evidence."
+      ],
+      [
+        "Make the work yours",
+        "Use a draft to see what is missing. Add a real example, test an instruction and replace vague language with something concrete. The tool can help you express an idea; deciding whether the idea deserves publishing remains your work."
+      ]
+    ],
+    "photo": {
+      "alt": "A fountain pen resting on a handwritten page",
+      "credit": "Unsplash",
+      "url": "https://unsplash.com"
+    }
+  },
+  {
+    "id": "ambition",
+    "cat": "Ambition",
+    "title": "The unglamorous art of showing up again.",
+    "desc": "Progress often looks ordinary while you are in the middle of it.",
+    "time": 1,
+    "sections": [
+      [
+        "Make the next step small enough",
+        "A large goal can leave you with no obvious action for today. Translate it into something observable: finish one lesson, practise one technique or write one paragraph. A clear action is easier to start than an identity you hope to become."
+      ],
+      [
+        "Keep a record you can use",
+        "Note what you attempted and where you got stuck. The record is useful because it gives your next session a starting point. It does not need to become another performance to maintain."
+      ],
+      [
+        "Return without the ceremony",
+        "Missing a day need not become a story about your character. Look at what interrupted the plan and adjust it. Progress depends on returning often enough to learn from the work."
+      ]
+    ],
+    "photo": {
+      "alt": "A person writing in a notebook at a cafe table",
+      "credit": "Unsplash",
+      "url": "https://unsplash.com"
+    }
+  },
+  {
+    "id": "internet",
+    "cat": "Technology",
+    "title": "Your website is a place you can build on.",
+    "desc": "From an idea in your notes to a corner of the internet with a purpose.",
+    "time": 1,
+    "sections": [
+      [
+        "Decide what the visitor came to do",
+        "A website begins with a purpose. A reader wants an explanation. A customer wants to understand an offer. A clear page helps that person find the next useful step without making them decode the design."
+      ],
+      [
+        "Connect the pieces",
+        "HTML gives a page its structure, CSS controls its appearance and JavaScript can make it respond to actions. A server receives requests and returns responses. A database can store records when the application needs them. Each piece has a job."
+      ],
+      [
+        "Publish a useful first version",
+        "Begin with one complete visitor journey. Make the text readable on a phone, test the links and explain what the site offers. Add complexity when an actual need appears. A small working website gives you something concrete to improve."
+      ]
+    ],
+    "photo": {
+      "alt": "A laptop displaying code on a working desk",
+      "credit": "Unsplash",
+      "url": "https://unsplash.com"
+    }
+  }
+]

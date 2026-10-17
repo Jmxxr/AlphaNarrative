@@ -1,63 +1,15 @@
-import type { Metadata } from "next";
-import { Manrope, Cormorant_Garamond, IBM_Plex_Mono } from "next/font/google";
-import { Footer } from "./components/Footer";
-import { Navigation } from "./components/Navigation";
-import "./globals.css";
-import "./design.css";
-
-const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
-const serif = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-serif", weight: ["400", "500", "600"] });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"] });
-
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import './journal.css';
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alphanarrative.pro"),
-  title: {
-    default: "Alpha Narrative — Software, Websites & Mobile Products",
-    template: "%s | Alpha Narrative",
-  },
-  description: "Alpha Narrative designs and builds business software, websites and mobile products for ambitious companies.",
-  applicationName: "Alpha Narrative",
-  keywords: [
-    "Alpha Narrative",
-    "software development",
-    "AI automation",
-    "business systems",
-    "business intelligence",
-    "Nigeria",
-    "Port Harcourt",
-  ],
-  authors: [{ name: "John Michael Abang" }],
-  creator: "Alpha Narrative",
-  publisher: "Alpha Narrative",
-  openGraph: {
-    type: "website",
-    locale: "en_NG",
-    url: "/",
-    siteName: "Alpha Narrative",
-    title: "Alpha Narrative — Engineering Intelligence for Business",
-    description:
-      "Software, AI automation and connected business systems built for growth.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Alpha Narrative — Engineering Intelligence for Business",
-    description:
-      "Software, AI automation and connected business systems built for growth.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  metadataBase: new URL('https://www.alphanarrative.pro'),
+  title: { default: 'Alpha Narrative — Culture, Money, Technology & Ambition', template: '%s | Alpha Narrative' },
+  description: 'An independent journal exploring culture, money, technology, and ambition. Entertain the masses. Educate the interested. Empower the few.',
+  applicationName: 'Alpha Narrative',
+  openGraph: { type: 'website', siteName: 'Alpha Narrative', locale: 'en_NG', images: ['/journal/attention.jpg'] },
+  twitter: { card: 'summary_large_image' },
+  icons: { icon: '/journal-mark.svg' },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${sans.variable} ${serif.variable} ${mono.variable}`}><Navigation /><main>{children}</main><Footer /></body>
-    </html>
-  );
+export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
+ return <html lang="en"><body><a className="skip-link" href="#main-content">Skip to content</a><div className="wrap"><header><div className="top"><span>AN INDEPENDENT JOURNAL FOR CURIOUS MINDS</span><span>CULTURE · MONEY · TECHNOLOGY · AMBITION</span></div><div className="mast"><Link className="logo" href="/">Alpha Narrative<span className="dot">.</span></Link><div className="motto">Entertain the masses. Educate the interested.<br/>Empower the few.</div></div><nav className="nav" aria-label="Main navigation"><Link href="/#latest">The Latest</Link>{['Culture','Money','Technology','Ambition'].map(c=><Link key={c} href={'/?topic='+c+'#latest'}>{c}</Link>)}<Link href="/about">Our philosophy ↗</Link><Link className="search-toggle" href="/?search=1#latest">Search ⌕</Link></nav></header><main id="main-content">{children}</main><footer className="footer"><Link className="foot-logo" href="/">Alpha Narrative<span className="dot">.</span></Link><span>Entertain. Educate. Empower.</span><span>© 2026 Alpha Narrative · <Link href="/about">About the journal</Link></span></footer></div></body></html>;
 }
