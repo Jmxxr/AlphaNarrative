@@ -1,0 +1,3 @@
+'use client';
+import {useState} from 'react';
+export default function FeedActions(){const [message,setMessage]=useState('');const url='https://www.alphanarrative.pro/feed.xml';return <div className="feed-actions"><label htmlFor="feed-url">Your feed address</label><div><input id="feed-url" readOnly value={url} onFocus={e=>e.target.select()}/><button className="button button-dark" onClick={async()=>{try{await navigator.clipboard.writeText(url);setMessage('Feed address copied. Paste it into your RSS reader.');}catch{setMessage('Select the feed address above and copy it manually.');}}}>Copy feed address</button></div><p role="status">{message}</p></div>;}
